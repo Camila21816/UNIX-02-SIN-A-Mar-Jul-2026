@@ -11,3 +11,4 @@ cat cpuinfo
 pwd
 cd / #se utiliza para navegar entre carpetas
 ls -F #clasificar visualmente los elementos de un directorio añadiendo un símbolo al final de cada nomb
+ls -i #mostrar el inodo de cada archivo
