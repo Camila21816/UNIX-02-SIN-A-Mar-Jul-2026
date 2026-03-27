@@ -12,3 +12,5 @@ pwd
 cd / #se utiliza para navegar entre carpetas
 ls -F #clasificar visualmente los elementos de un directorio añadiendo un símbolo al final de cada nomb
 ls -i #mostrar el inodo de cada archivo
+Hard Link #si borras el arvhivo original sigue existiendo siempre y cuando permanexca un  hard link
+Soft link # es un puntero, si se borra el enlace simbolico se "rompe"
