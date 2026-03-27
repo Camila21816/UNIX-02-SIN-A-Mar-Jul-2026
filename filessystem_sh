@@ -6,3 +6,4 @@ ls
 cd /proc
 #muestra detalles minuciosos del procesador, incluyendo modelo, núcleos, velocidad y flags
 cat cpuinfo
+      #en media se cuentan las particiones 
