@@ -24,3 +24,5 @@ gpg --sign-key #estamos certificando la autenticidad de la llave pública de nue
 #volvimos a verificar el documento de la apreja para ver el cambio
 #bloque F cifrado y firmas simultaneos
 gpg --encrypt --sign #es un proceso de doble capa que utiliza la llave pública del destinatario para ocultar el mensaje y la propia llave privada para sellar la identidad
+#compartimos el archivo con la pareja
+gpg --decrypt # descrifrar y validar de forma segura
