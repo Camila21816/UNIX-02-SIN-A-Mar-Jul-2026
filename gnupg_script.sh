@@ -20,3 +20,4 @@ gpg --sign doc_no_cifrado.txt # Firmar en formato binario
 gpg --decrypt "doc_no_cifradosecundario.txt (1).gpg" #abrir el archivo firmado con la contraseña
 #blque E
 gpg --edit-key (trust) #Esto nos hace establecer el grado de confianza
+gpg --sign-key #estamos certificando la autenticidad de la llave pública de nuestra pareja
