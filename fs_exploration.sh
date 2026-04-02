@@ -13,3 +13,5 @@ lsblk -f #List block devices. Unlike parted, which focuses on physical hardware,
 #sale BIOS porque se ejecuta en github entonces esto quiere decir que la capa de virtualización simula un arranque simple para ahorrar recursos
 || #OR It is error handling or conditional execution
 && #The logical connector "AND" Its function is to chain commands so that the second one is executed only if the first one was successful
+#GRUB2 es el estandar actual que carga el kernla delinux en la memoria actual
+cat /etc/default/grub #It is used to read and display the contents of a file directly in the terminal
