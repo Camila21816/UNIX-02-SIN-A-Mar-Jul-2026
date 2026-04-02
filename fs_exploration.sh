@@ -7,4 +7,9 @@ sudo apt upgrade #Install the latest versions of the libraries
 sudo apt install parted #install the software
 sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n" #A technical report of all your storage hardware and software in a single block of text
 sudo parted -l #physical discs that are available
-lsblk -f #List block devices
+lsblk -f #List block devices. Unlike parted, which focuses on physical hardware, lsblk focuses on data volumes and how Linux is currently using them
+# loop es un archivo que actua como una unidad de almacenamiento, irve cuando se trabaja con sesiones, ya que al cerrar el archivo no se pierde la informacion
+[ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS" #Check if the directory exists in that specific path, If the directory exists (the test is true), the system prints "UEFI". This means your motherboard booted in modern mode. If the directory does not exist (the test fails), the system prints "BIOS". This indicates that you are on an older system or in compatibility mode (Legacy/CSM).
+#sale BIOS porque se ejecuta en github entonces esto quiere decir que la capa de virtualización simula un arranque simple para ahorrar recursos
+|| #OR It is error handling or conditional execution
+&& #The logical connector "AND" Its function is to chain commands so that the second one is executed only if the first one was successful
