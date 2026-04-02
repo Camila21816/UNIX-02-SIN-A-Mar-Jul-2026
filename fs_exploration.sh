@@ -23,3 +23,4 @@ opt/ #programas instalados manualmente
 #sistema de ficheros El sistema de archivos (File System) es la estructura que utiliza Linux para organizar, almacenar y gestionar los datos en el disco duro. Sin él, el disco sería solo un montón de bits sin sentido; el sistema de archivos es el que le da nombre, jerarquía y permisos a la información.
 #inodo identidicador unico del archivo
 echo "mi archivo" > test.txt #create the file
+stat test.txt #displays all the inode information of that file in a readable format
