@@ -15,3 +15,11 @@ lsblk -f #List block devices. Unlike parted, which focuses on physical hardware,
 && #The logical connector "AND" Its function is to chain commands so that the second one is executed only if the first one was successful
 #GRUB2 es el estandar actual que carga el kernla delinux en la memoria actual
 cat /etc/default/grub #It is used to read and display the contents of a file directly in the terminal
+boot/archivos #necesarios para arrancar el sistema operativo
+mnt/ #montajes temporales manuales 
+opt/ #programas instalados manualmente
+/run #guarada informacion temporal del sistema 
+#sockets del sistemas son puntos de comunicaión entre 2 programas 
+#sistema de ficheros El sistema de archivos (File System) es la estructura que utiliza Linux para organizar, almacenar y gestionar los datos en el disco duro. Sin él, el disco sería solo un montón de bits sin sentido; el sistema de archivos es el que le da nombre, jerarquía y permisos a la información.
+#inodo identidicador unico del archivo
+echo "mi archivo" > test.txt #create the file
