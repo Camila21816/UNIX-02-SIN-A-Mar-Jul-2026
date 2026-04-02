@@ -5,3 +5,4 @@ ls -F #It is used to list the contents of the current directory
 sudo apt update #update url list
 sudo apt upgrade #Install the latest versions of the libraries
 sudo apt install parted #install the software
+sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n" #A technical report of all your storage hardware and software in a single block of text
