@@ -5,3 +5,6 @@ cd /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/proyecto #I move to the project direct
 pwd #It tells me which directory I'm in.
 cd ~ #It moves me to the home directory
 cd /home/codespace #absolute path
+echo $HOME #environment variable to tell me which directory I am in
+echo $BASH #path to the bash executable
+echo $PATH #Displays the folder list, reveals the priority order, and helps diagnose errors.
