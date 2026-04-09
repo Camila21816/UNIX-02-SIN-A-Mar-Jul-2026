@@ -8,3 +8,8 @@ cd /home/codespace #absolute path
 echo $HOME #environment variable to tell me which directory I am in
 echo $BASH #path to the bash executable
 echo $PATH #Displays the folder list, reveals the priority order, and helps diagnose errors.
+ls -lai #list files and folders
+man ls #open the official user manual
+ls --all #mostrar todos los archivos de un directorio(ls -a)
+. #current directory
+.. #hard links
