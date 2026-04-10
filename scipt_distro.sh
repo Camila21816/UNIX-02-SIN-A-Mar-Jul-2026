@@ -19,3 +19,4 @@ sudo vi init #It creates the init file, which is the first program that the kern
 #The first line tells the kernel to use the shell to interpret the file. The second line simply starts an interactive shell.
 sudo rm linuxrc #This command deletes a specific file that BusyBox usually creates by default.
 sudo chmod +x init #grants execution permissions
+sudo find . | cpio -o -H newc > ../init.cpio #create the boot package
