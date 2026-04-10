@@ -4,5 +4,5 @@ git clone --depth 1 https://github.com/torvalds/linux.git cd linux
 #clone the kernel repository
 cd linux #I move to the Linux folder
 make menuconfig #Configure the compilation options
-
 make -j 2 # compile the kernel with the number of available cores
+sudo mkdir /boot-files # Copy the kernel image to a working directory
