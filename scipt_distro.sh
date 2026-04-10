@@ -8,3 +8,4 @@ make -j 2 # compile the kernel with the number of available cores
 sudo mkdir /boot-files # Copy the kernel image to a working directory
 sudo cp arch/x86/boot/bzImage /boot-files #move the system to a folder
 cd . . #It is used to move up one level in the directory hierarchy.
+git clone --depth 1 https://git.busybox.net/busybox #clone a git repository
