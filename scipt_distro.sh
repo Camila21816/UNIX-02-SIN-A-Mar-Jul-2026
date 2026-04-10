@@ -23,3 +23,4 @@ sudo find . | cpio -o -H newc > ../init.cpio #create the boot package
 sudo su # Switch to root for the following steps (this simplifies permissions)
 dd if=/dev/zero of=boot bs=1M count=50 #Create an empty 50 MB file that will serve as a virtual disk
 mkfs -t fat boot #Create a FAT filesystem in that file (required by Syslinux)
+syslinux boot #Install the Syslinux bootloader on the image
