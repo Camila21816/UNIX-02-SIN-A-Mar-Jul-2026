@@ -21,3 +21,4 @@ sudo rm linuxrc #This command deletes a specific file that BusyBox usually creat
 sudo chmod +x init #grants execution permissions
 sudo find . | cpio -o -H newc > ../init.cpio #create the boot package
 sudo su # Switch to root for the following steps (this simplifies permissions)
+dd if=/dev/zero of=boot bs=1M count=50 #Create an empty 50 MB file that will serve as a virtual disk
