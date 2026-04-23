@@ -49,3 +49,9 @@ rw = 6 #read and write but not execute
 r-x=5 #read and execute but not write
 r-- = 4 #just read
 -0 #no permission
+#It is 4,2,1 and not 1,2,3 because it guarantees that the sums will be unique.
+touch prueba.txt #Create an empty file called test.txt.
+chmod 600 prueba.txt #Restrict the file to the maximum. The 6 gives read and write access to the owner (you), and the 00s remove all access for the group and others. Only you will be able to see or edit it.
+ls -l prueba.txt #allows you to verify the change
+chmod 755 prueba.txt #Change the permissions to a common standard for programs. You have full control (7), while the group and the rest of the world can read and execute it (5), but not modify it.
+ls -l prueba.txt #a new state will be seen
