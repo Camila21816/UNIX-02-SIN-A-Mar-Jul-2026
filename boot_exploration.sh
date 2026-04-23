@@ -27,3 +27,11 @@ sudo su #Root access but stay where you are currently working.
 sudo su - #It serves to ensure that nothing from the normal user configuration interferes with administrative tasks.
 echo "$HOME" #Expand the variable, it shows me what $HOME contains.
 echo '$HOME' #prints $HOME
+echo '#!/bin/sh > hola.sh #Create a file called hola.sh and write #!/bin/sh on its first line.
+echo 'echo "Hola desde mi primer script"' >> hola.sh #Add a second line to the file with the command echo "Hello from my first script".
+cat hola.sh #Display the file contents on the screen so you can verify that everything is okay.
+./hola.sh #Try running the script you just created.
+ls -l hola.sh #Displays file details in long list format. Use it to see who has read (r), write (w), and execute (x) permissions.
+chmod +x hola.sh #This is the key command. `chmod` (change mode) and `+x` add execute permissions. Now the system knows that this file isn't just text, but a program it can run.
+ls -l hola.sh #Run it again to verify the change. You will now see an "x" in the permissions.
+./hola.sh #Now that it has permission, this command finally runs the script and you will see the message: "Hello from my first script" on the screen.
