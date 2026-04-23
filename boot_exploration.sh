@@ -25,3 +25,5 @@ sudo -i #It makes us the root user (superuser) and places us in the working envi
 exit #Log out of superuser session
 sudo su #Root access but stay where you are currently working.
 sudo su - #It serves to ensure that nothing from the normal user configuration interferes with administrative tasks.
+echo "$HOME" #Expand the variable, it shows me what $HOME contains.
+echo '$HOME' #prints $HOME
