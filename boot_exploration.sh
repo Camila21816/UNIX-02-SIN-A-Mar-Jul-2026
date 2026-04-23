@@ -35,3 +35,9 @@ ls -l hola.sh #Displays file details in long list format. Use it to see who has 
 chmod +x hola.sh #This is the key command. `chmod` (change mode) and `+x` add execute permissions. Now the system knows that this file isn't just text, but a program it can run.
 ls -l hola.sh #Run it again to verify the change. You will now see an "x" in the permissions.
 ./hola.sh #Now that it has permission, this command finally runs the script and you will see the message: "Hello from my first script" on the screen.
+ls /etc #List the contents of the /etc directory. It is the sacred folder of Linux where almost all the system configuration files and installed programs are stored.
+touch /etc/prueba.txt #Try creating an empty file called test.txt inside that folder.
+mkdir ~/mi_carpeta #Create a new directory called my_folder in Home. The tilde symbol (~) is a shortcut for /home/your_username.
+apt install cowsay #This is the command to install a program from official repositories
+#You can use `touch /etc/prueba.txt` if you need `sudo`, because the `/etc` directory contains system-wide configuration files. For security reasons, Linux prohibits regular users from creating or modifying files there. Without `sudo`, you will receive a "Permission denied" error.
+#Use `apt install cowsay` if you need `sudo` because installing programs changes system binaries and affects all users. Only the administrator has permission to manage installed software.
