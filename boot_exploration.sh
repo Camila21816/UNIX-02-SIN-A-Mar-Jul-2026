@@ -41,3 +41,11 @@ mkdir ~/mi_carpeta #Create a new directory called my_folder in Home. The tilde s
 apt install cowsay #This is the command to install a program from official repositories
 #You can use `touch /etc/prueba.txt` if you need `sudo`, because the `/etc` directory contains system-wide configuration files. For security reasons, Linux prohibits regular users from creating or modifying files there. Without `sudo`, you will receive a "Permission denied" error.
 #Use `apt install cowsay` if you need `sudo` because installing programs changes system binaries and affects all users. Only the administrator has permission to manage installed software.
+r=4
+w=2
+x=1
+rwx=7 #all permissions
+rw = 6 #read and write but not execute
+r-x=5 #read and execute but not write
+r-- = 4 #just read
+-0 #no permission
