@@ -20,3 +20,4 @@ sudo echo "hola">/etc/archivo_protegido #no working
 sudo echo "hola" | sudo tee /etc/archivo_protegido > /dev/null #This command is used to write text to a system-protected file without the terminal displaying unnecessary messages. `sudo tee` is used because it grants the process administrator privileges to save the content, while the final part (`> /dev/null`) clears the screen so you don't see repeated text while the file is being saved.
 ls /etc #List the contents of the /etc directory
 sudo echo "hola" | sudo tee /etc/archivo_protegido #It works but it doesn't redirect
+sudo sh -c'echo "chao">>/etc/archivo_protegido' #Using `sh -c allows both the command and the writing action to be executed with root privileges. Ultimately, this appends the word "goodbye" to the end of the file without deleting what was already there.
