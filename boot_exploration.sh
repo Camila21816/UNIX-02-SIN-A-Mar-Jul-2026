@@ -21,3 +21,7 @@ sudo echo "hola" | sudo tee /etc/archivo_protegido > /dev/null #This command is 
 ls /etc #List the contents of the /etc directory
 sudo echo "hola" | sudo tee /etc/archivo_protegido #It works but it doesn't redirect
 sudo sh -c'echo "chao">>/etc/archivo_protegido' #Using `sh -c allows both the command and the writing action to be executed with root privileges. Ultimately, this appends the word "goodbye" to the end of the file without deleting what was already there.
+sudo -i #It makes us the root user (superuser) and places us in the working environment.
+exit #Log out of superuser session
+sudo su #Root access but stay where you are currently working.
+sudo su - #It serves to ensure that nothing from the normal user configuration interferes with administrative tasks.
