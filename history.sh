@@ -200,3 +200,60 @@ chmod +t /tmp/kepler_zone
    55  git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
 
 #problem 7
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ cat > /tmp/vega_key.batch <<EOF
+%no-protection
+Key-Type: RSA
+Key-Length: 2048
+Name-Real: vega
+Name-Email: vega@kepler.lab
+Expire-Date: 0
+%commit
+EOF
+
+gpg --batch --generate-key /tmp/vega_key.batch
+gpg: directory '/home/codespace/.gnupg' created
+gpg: keybox '/home/codespace/.gnupg/pubring.kbx' created
+gpg: /home/codespace/.gnupg/trustdb.gpg: trustdb created
+gpg: directory '/home/codespace/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/home/codespace/.gnupg/openpgp-revocs.d/A70D1F03071F01110E7EDB790A78BC3BB45E34D4.rev'
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ gpg --list-keys
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+/home/codespace/.gnupg/pubring.kbx
+----------------------------------
+pub   rsa2048 2026-04-24 [SCEAR]
+      A70D1F03071F01110E7EDB790A78BC3BB45E34D4
+uid           [ultimate] vega <vega@kepler.lab>
+
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ cd evaluation
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ gpg --encrypt --recipient vega@kepler.lab kepler/registros/sensores.log
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ ls kepler/registros/
+README.txt  sensores.log  sensores.log.gpg
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ ^C
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ cd ..
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ git add .
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ git commit -m "Fix problema 7: llave GPG generada y sensores.log cifrado"
+[eval_p2_1_g2 569a25f] Fix problema 7: llave GPG generada y sensores.log cifrado
+ 2 files changed, 24 insertions(+)
+ create mode 100644 evaluation/kepler/registros/sensores.log.gpg
+    57  cat > /tmp/vega_key.batch <<EOF
+%no-protection
+Key-Type: RSA
+Key-Length: 2048
+Name-Real: vega
+Name-Email: vega@kepler.lab
+Expire-Date: 0
+%commit
+EOF
+
+   58  gpg --batch --generate-key /tmp/vega_key.batch
+   59  gpg --list-keys
+   60  cd evaluation
+   61  gpg --encrypt --recipient vega@kepler.lab kepler/registros/sensores.log
+   62  ls kepler/registros/
+   63  cd ..
+   64  git add .
+   65  git commit -m "Fix problema 7: llave GPG generada y sensores.log cifrado"
+
+#problem 8
