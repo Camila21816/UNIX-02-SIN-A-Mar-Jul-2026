@@ -159,3 +159,20 @@ git commit -m "Fix problema 4: permisos simbolicos corregidos"
    39  git commit -m "Fix problema 4: permisos simbolicos corregidos"
 
 #problem 5
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ cd evaluation
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ chmod u+s kepler/runner.sh
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ ls -l kepler/runner.sh
+-rwsrw-rw- 1 codespace codespace 125 Apr 24 16:16 kepler/runner.sh
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ cd ..
+git add .
+git commit -m "Fix problema 5: SUID activado en runner.sh"
+[eval_p2_1_g2 71cf958] Fix problema 5: SUID activado en runner.sh
+ 1 file changed, 30 insertions(+)
+   41  cd evaluation
+   42  chmod u+s kepler/runner.sh
+   43  ls -l kepler/runner.sh
+   44  cd ..
+   45  git add .
+   46  git commit -m "Fix problema 5: SUID activado en runner.sh"
+
+#problem 6
