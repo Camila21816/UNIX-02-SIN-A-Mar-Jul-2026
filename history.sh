@@ -129,3 +129,33 @@ git commit -m "Fix problema 3: permisos numericos 600 en sensores.log"
    28  git commit -m "Fix problema 3: permisos numericos 600 en sensores.log"
 
 #problem 4
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ cd evaluation
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ chmod u+x kepler/runner.sh
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ chmod o-w kepler/ajustes.conf
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ ls -l kepler/runner.sh kepler/ajustes.conf
+-rw-rw-r-- 1 codespace codespace 122 Apr 24 16:16 kepler/ajustes.conf
+-rwxrw-rw- 1 codespace codespace 125 Apr 24 16:16 kepler/runner.sh
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ chmod u+x kepler/runner.sh
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ chmod o-w kepler/ajustes.conf
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ ls -l kepler/runner.sh kepler/ajustes.conf
+-rw-rw-r-- 1 codespace codespace 122 Apr 24 16:16 kepler/ajustes.conf
+-rwxrw-rw- 1 codespace codespace 125 Apr 24 16:16 kepler/runner.sh
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/evaluation (eval_p2_1_g2) $ cd ..
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ git add .
+git commit -m "Fix problema 4: permisos simbolicos corregidos"
+[eval_p2_1_g2 7fdcbab] Fix problema 4: permisos simbolicos corregidos
+ 2 files changed, 42 insertions(+), 1 deletion(-)
+ mode change 100644 => 100755 evaluation/kepler/runner.sh
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ history
+  30  cd evaluation
+   31  chmod u+x kepler/runner.sh
+   32  chmod o-w kepler/ajustes.conf
+   33  ls -l kepler/runner.sh kepler/ajustes.conf
+   34  chmod u+x kepler/runner.sh
+   35  chmod o-w kepler/ajustes.conf
+   36  ls -l kepler/runner.sh kepler/ajustes.conf
+   37  cd ..
+   38  git add .
+   39  git commit -m "Fix problema 4: permisos simbolicos corregidos"
+
+#problem 5
