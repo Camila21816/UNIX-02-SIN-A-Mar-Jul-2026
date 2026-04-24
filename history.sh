@@ -176,3 +176,27 @@ git commit -m "Fix problema 5: SUID activado en runner.sh"
    46  git commit -m "Fix problema 5: SUID activado en runner.sh"
 
 #problem 6
+   47  history
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ chmod +t /tmp/kepler_zone
+chmod: cannot access '/tmp/kepler_zone': No such file or directory
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ ls -ld /tmp/kepler_zone
+ls: cannot access '/tmp/kepler_zone': No such file or directory
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ mkdir -p /tmp/kepler_zone
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ chmod +t /tmp/kepler_zone
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ ls -ld /tmp/kepler_zone
+drwxr-xrwT+ 2 codespace codespace 4096 Apr 24 16:49 /tmp/kepler_zone
+@Camila21816 ➜ /workspaces/UNIX-02-SIN-A-Mar-Jul-2026 (eval_p2_1_g2) $ cd /workspaces/UNIX-02-SIN-A-Mar-Jul-2026
+git add .
+git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
+[eval_p2_1_g2 7eba41e] Fix problema 6: sticky bit en /tmp/kepler_zone
+ 1 file changed, 17 insertions(+)
+chmod +t /tmp/kepler_zone
+   49  ls -ld /tmp/kepler_zone
+   50  mkdir -p /tmp/kepler_zone
+   51  chmod +t /tmp/kepler_zone
+   52  ls -ld /tmp/kepler_zone
+   53  cd /workspaces/UNIX-02-SIN-A-Mar-Jul-2026
+   54  git add .
+   55  git commit -m "Fix problema 6: sticky bit en /tmp/kepler_zone"
+
+#problem 7
