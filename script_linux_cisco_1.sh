@@ -32,3 +32,4 @@ chmod u+x hello.sh #grants execution permissions
 sudo chown root hello.sh
 sudo ./hello.sh
 #We secured the script under root ownership and ran it with full administrative power.
+cat animals.txt #Read what's inside a small file.
