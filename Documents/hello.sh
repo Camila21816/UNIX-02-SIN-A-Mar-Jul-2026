@@ -1,0 +1,7 @@
+echo "_________________"
+echo "( Hello World! )"
+echo "-----------------"
+echo "        \      "
+echo "         \     "
+echo "          <(^)"
+echo "          ( )"
