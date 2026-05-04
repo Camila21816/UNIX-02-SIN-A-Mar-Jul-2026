@@ -13,3 +13,5 @@ aptitude -vv moo
 aptitude -v -v moo
 #The commands `aptitude -v moo`, `aptitude -vv moo`, and `aptitude -v -v moo` are used to modify the verbosity level (the level of detail in the output) of a hidden program function. The `-v` parameter increases the level of information the command attempts to provide to the user. Adding more `v` letters or repeating the parameter separately scales the system's response, triggering a series of programmed interactions that vary depending on the complexity of the query.
 pwd #Print the current working directory
+cd Documents #Change directory to Documents
+cd / #Go to the root directory
