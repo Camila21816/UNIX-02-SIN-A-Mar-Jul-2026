@@ -39,4 +39,4 @@ tail alpha.txt #Displays the last 10 lines of the file by default.
 head -n 5 alpha.txt #Limit the output to show only the first 5 lines.
 tail -n 5 alpha.txt #Limit the output to show only the last 5 lines.
 cp /etc/passwd . #Make a backup or duplicate of the system password file (/etc/passwd) directly in your current location.
-
+dd if=/dev/zero of=/tmp/swapex bs=1M count=50 #This command is used to create a file of a specific size (in this case, 50 MB) filled with zeros.
