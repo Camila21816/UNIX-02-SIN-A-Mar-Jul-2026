@@ -24,3 +24,7 @@ sudo su # Switch to root for the following steps (this simplifies permissions)
 dd if=/dev/zero of=boot bs=1M count=50 #Create an empty 50 MB file that will serve as a virtual disk
 mkfs -t fat boot #Create a FAT filesystem in that file (required by Syslinux)
 syslinux boot #Install the Syslinux bootloader on the image
+mkdir m #It allows you to generate multiple folders at once or nested structures using the - parameter
+mount boot m #This command connects the virtual disk file (boot) to a system folder (m). `mount`: This is the command to "mount" or connect. `boot`: This is the file containing your virtual disk (previously created with `dd` and formatted). `m`: This is the mount point. From now on, anything placed in the `m` folder is actually being saved within the `boot` file.
+cp bzImage init.cpio m #The function of this command is to copy the essential files so that the Linux distribution can start correctly, moving both the kernel (bzImage) and the temporary file system (initramfs.cpio.gz) to the destination m.
+umount m # This command performs a safe disconnection from the mount point, breaking the link between the m folder and the disk file to ensure that all data has been written correctly.
