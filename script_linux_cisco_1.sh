@@ -19,3 +19,7 @@ cd /home/sysadmin #Change the current working directory to the home folder of th
 cd School/Art #It's a way to navigate through the file hierarchy to specifically locate the directory dedicated to your art content.
 cd .. #This command allows you to go back one level in the folder hierarchy. Instead of entering a new location, you "go up" to the folder that contains the one you are currently in.
 cd ~ #Upon execution, the system instantly transports us to the home directory.
+ls -ls /var/log/
+ls -lt /var/log
+ls -lSr /var/log
+#These commands are used to audit system logs by displaying technical details. The first highlights the disk space occupied by each file, the second prioritizes the most recent events to facilitate troubleshooting, and the third sorts files from smallest to largest to identify which ones are consuming the most storage.
