@@ -33,3 +33,4 @@ sudo chown root hello.sh
 sudo ./hello.sh
 #We secured the script under root ownership and ran it with full administrative power.
 cat animals.txt #Read what's inside a small file.
+cat alpha.txt  #It is used to instantly dump and read the contents of alpha.txt.
