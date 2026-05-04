@@ -29,3 +29,6 @@ exit #get out of there
 ls -l hello.sh #It displays detailed information about a specific file called "hello.sh". Instead of just seeing the name, we get a line with its permissions.
 chmod u+x hello.sh #grants execution permissions
 ./hello.sh #This command is used to run the hello.sh script in the current directory.
+sudo chown root hello.sh
+sudo ./hello.sh
+#We secured the script under root ownership and ran it with full administrative power.
