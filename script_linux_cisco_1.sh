@@ -18,3 +18,4 @@ cd / #Go to the root directory
 cd /home/sysadmin #Change the current working directory to the home folder of the user "sysadmin".
 cd School/Art #It's a way to navigate through the file hierarchy to specifically locate the directory dedicated to your art content.
 cd .. #This command allows you to go back one level in the folder hierarchy. Instead of entering a new location, you "go up" to the folder that contains the one you are currently in.
+cd ~ #Upon execution, the system instantly transports us to the home directory.
