@@ -24,4 +24,7 @@ ls -lt /var/log
 ls -lSr /var/log
 #These commands are used to audit system logs by displaying technical details. The first highlights the disk space occupied by each file, the second prioritizes the most recent events to facilitate troubleshooting, and the third sorts files from smallest to largest to identify which ones are consuming the most storage.
 Switch to root user and exit #The first one enters administrator mode, and the second one exits it.
-su - #This makes us the root user by starting a clean session. By including the hyphen, the system loads the entire environment and configuration variables as if we had just logged in directly as administrator.
+su - #This makes us the root user by starting a clean session. By  the hyphen, the system loads the entire environment and configuration variables as if we had just logged in directly as administrator.
+exit #get out of there
+ls -l hello.sh #It displays detailed information about a specific file called "hello.sh". Instead of just seeing the name, we get a line with its permissions.
+chmod u+x hello.sh #grants execution permissions
