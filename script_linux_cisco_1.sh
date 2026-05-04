@@ -16,3 +16,4 @@ pwd #Print the current working directory
 cd Documents #Change directory to Documents
 cd / #Go to the root directory
 cd /home/sysadmin #Change the current working directory to the home folder of the user "sysadmin".
+cd School/Art #It's a way to navigate through the file hierarchy to specifically locate the directory dedicated to your art content.
