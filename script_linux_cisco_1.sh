@@ -15,3 +15,4 @@ aptitude -v -v moo
 pwd #Print the current working directory
 cd Documents #Change directory to Documents
 cd / #Go to the root directory
+cd /home/sysadmin #Change the current working directory to the home folder of the user "sysadmin".
