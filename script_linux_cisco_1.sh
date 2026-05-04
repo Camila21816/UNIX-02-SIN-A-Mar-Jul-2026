@@ -34,3 +34,8 @@ sudo ./hello.sh
 #We secured the script under root ownership and ran it with full administrative power.
 cat animals.txt #Read what's inside a small file.
 cat alpha.txt  #It is used to instantly dump and read the contents of alpha.txt.
+head alpha.txt #Displays the first 10 lines of the default file.
+tail alpha.txt #Displays the last 10 lines of the file by default.
+head -n 5 alpha.txt #Limit the output to show only the first 5 lines.
+tail -n 5 alpha.txt #Limit the output to show only the last 5 lines.
+
