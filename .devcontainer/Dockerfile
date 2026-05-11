@@ -206,10 +206,11 @@ WORKDIR /workspaces
 # - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
 # - git lfs install --system: registra los hooks de LFS globalmente para
 #   que, si un repo los necesita, funcionen sin sorpresas.
+
 # Cambiar shell de login de root a zsh dentro de la imagen,
 # para que chsh ya no haga falta y todo sea consistente.
 RUN chsh -s /usr/bin/zsh root
-RUN git config --global --add safe.directory /workspaces/UNIX-02-SIN-A-Mar-Jul-2026
+
 # Prompt institucional para los y las estudiantes del curso
 RUN cat >> /root/.zshrc <<'EOF'
 
