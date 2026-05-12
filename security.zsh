@@ -17,3 +17,12 @@ umask 077 #This sets a "mask" that removes all permissions for the group and oth
 touch secreto.txt #Create an empty file called secret.txt.
 mkdir privado #Create a directory called "private". Only I can access the folder, list its files, or create things within it. For all other users, the folder is "locked".
 ls -l #It is used to list the files and verify that the permissions were applied correctly.
+
+#create a file as a normal user
+whoami #This command prints the name of the user you are currently working as. "root"
+echo "Hola" > mi_archivo #Create a new text file with "hello"
+ls -l mi_archivo #It displays detailed information about the newly created file.
+#chown #Changing the owner of "my_file": operation not allowed, But it works now because we're rooted.
+useradd -m -s /usr/bin/zsh luna #Create the user named luna. It automatically creates the user's home directory, usually in /home/luna.
+chown luna mi_archivo #This command changes the owner of the previous file.
+#If we are not logged in as root, we must use sudo
