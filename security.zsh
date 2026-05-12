@@ -40,3 +40,8 @@ touch comun #You create a file called common and check its details.
  chown luna:grupo_test mi_archivo #This action performs a dual assignment, setting luna as the owner and grupo_test as the group responsible for the file simultaneously. It's a consolidation technique that saves you from having to run chown and chgrp separately.
  ls -l mi_archivo #It is used as a verification tool to confirm that the change was applied correctly; in the terminal output, you will now see the user column as luna and the group column as group_test.
  #does not ask for password
+
+mkdir -p proyecto #It creates the "project" directory and, thanks to the -p (parents) option, allows you to automatically generate any necessary subdirectory in the path without errors if it already exists.
+touchproyecto/readme proyecto/sub/datos #It quickly generates empty files in different locations within the structure to simulate a real working environment.
+sudo chown -R luna_grupo_test proyecto #This is the most powerful instruction in this sequence. It applies the change of owner (luna) and group (grupo_test) to the main folder and, using the -R (recursive) parameter, automatically extends it to all previously created files and subfolders.
+ls -lR proyecto #Perform a detailed recursive listing to verify that the entire structure, from top to bottom, has correctly inherited the new user and group property.
