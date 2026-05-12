@@ -32,3 +32,8 @@ groupadd grupo_test #Create a new group in the system called group_test.
 touch comun #You create a file called common and check its details. 
  ls -l comun #You check their details.
  cat /etc/group #This command prints the contents of the configuration file where all system groups are stored.
+
+ usermod -a -G grupo_test luna #It is used for advanced identity management in Linux, allowing the user luna to be integrated into the group_test team. The -G option designates the latter as a supplementary group, while the -a parameter is essential for a secure addition, as it appends the new group to the user's profile without removing them from their previous affiliations.
+ chgrp grupo_test comun #This command changes the "family" (group) to which the file belongs. group_test: The new owning group. common: The affected file.
+ ls -l comun
+ 
