@@ -12,3 +12,8 @@ ls -l
  chown -R $(whoami) .
 setfacl -bnR .
 #They solve ownership and extended permissions problems
+
+umask 077 #This sets a "mask" that removes all permissions for the group and other users. Anything you create from this point forward will be private. Use this when handling sensitive information.
+touch secreto.txt #Create an empty file called secret.txt.
+mkdir privado #Create a directory called "private". Only I can access the folder, list its files, or create things within it. For all other users, the folder is "locked".
+ls -l #It is used to list the files and verify that the permissions were applied correctly.
