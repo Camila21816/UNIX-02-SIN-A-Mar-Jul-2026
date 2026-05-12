@@ -36,4 +36,7 @@ touch comun #You create a file called common and check its details.
  usermod -a -G grupo_test luna #It is used for advanced identity management in Linux, allowing the user luna to be integrated into the group_test team. The -G option designates the latter as a supplementary group, while the -a parameter is essential for a secure addition, as it appends the new group to the user's profile without removing them from their previous affiliations.
  chgrp grupo_test comun #This command changes the "family" (group) to which the file belongs. group_test: The new owning group. common: The affected file.
  ls -l comun
- 
+
+ chown luna:grupo_test mi_archivo #This action performs a dual assignment, setting luna as the owner and grupo_test as the group responsible for the file simultaneously. It's a consolidation technique that saves you from having to run chown and chgrp separately.
+ ls -l mi_archivo #It is used as a verification tool to confirm that the change was applied correctly; in the terminal output, you will now see the user column as luna and the group column as group_test.
+ #does not ask for password
