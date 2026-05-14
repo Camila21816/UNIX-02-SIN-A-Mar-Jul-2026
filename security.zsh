@@ -68,3 +68,9 @@ grep -E "desarrolladores\|operaciones|servicios_web" /etc/group
 #verify that they were created
 groupadd --help #see main options
 grep "GID_MIN\|GIB_MAX\|SYS_GID" /etc/login.defs #View the range of GIDs in the system. System groups have a GID lower than the minimum user
+
+addgroup creatividad 
+addgroup --system cache-web
+addgroup --gid 2100 marketing
+#create groups with addgroup
+grep "creatividad\|marketing\|cache_web" /etc/group #verify
