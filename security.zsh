@@ -45,3 +45,6 @@ mkdir -p proyecto #It creates the "project" directory and, thanks to the -p (par
 touchproyecto/readme proyecto/sub/datos #It quickly generates empty files in different locations within the structure to simulate a real working environment.
 sudo chown -R luna_grupo_test proyecto #This is the most powerful instruction in this sequence. It applies the change of owner (luna) and group (grupo_test) to the main folder and, using the -R (recursive) parameter, automatically extends it to all previously created files and subfolders.
 ls -lR proyecto #Perform a detailed recursive listing to verify that the entire structure, from top to bottom, has correctly inherited the new user and group property.
+
+id #user ID (numeric), primary group, secondary groups
+cat/etc/passwd | head -10 #View all system users
