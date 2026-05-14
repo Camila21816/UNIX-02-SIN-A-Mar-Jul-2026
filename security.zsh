@@ -57,3 +57,14 @@ id -g #Primary Group ID
 is -G #all Group IDs
 
 cat /etc/group | grep root #Filter the word I give you next, in this case root or it could also be our moon machine
+
+mkdir ~/proyecto_unix/ #create project_unix directory
+ls -la ~/proyecto_unix/ #List the files of the project we just created
+groupadd -g 2000 operaciones #create a simple group
+groupadd desarrolladores #we create "developers"
+groupadd --system servicios_web #group of systems (GID < 1000)
+grep "desarrolladores\|operaciones|servicios_web" /etc/group 
+grep -E "desarrolladores\|operaciones|servicios_web" /etc/group 
+#verify that they were created
+groupadd --help #see main options
+grep "GID_MIN\|GIB_MAX\|SYS_GID" /etc/login.defs #View the range of GIDs in the system. System groups have a GID lower than the minimum user
