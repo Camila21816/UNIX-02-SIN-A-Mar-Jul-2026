@@ -74,3 +74,14 @@ addgroup --system cache-web
 addgroup --gid 2100 marketing
 #create groups with addgroup
 grep "creatividad\|marketing\|cache_web" /etc/group #verify
+
+groups
+id
+usermod -aG desarrolladores $USER (root)
+usermod -aG creatividad $USER (root)
+#add user to a group with usermod (low level)
+groupadd grupo_temporal #create temporary_group
+usermod -aG grupo_temporal root # We added the group
+id root #You can see all the groups he belongs to
+usermod -G desarrolladores root #This removes all child groups except developers.
+is root #He lost all the other groups
