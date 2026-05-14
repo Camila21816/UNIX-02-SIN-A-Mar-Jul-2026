@@ -48,3 +48,10 @@ ls -lR proyecto #Perform a detailed recursive listing to verify that the entire 
 
 id #user ID (numeric), primary group, secondary groups
 cat/etc/passwd | head -10 #View all system users
+groups
+groups root
+groups $Luna
+
+id -u #User ID
+id -g #Primary Group ID
+is -G #all Group IDs
