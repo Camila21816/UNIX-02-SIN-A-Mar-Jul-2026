@@ -55,3 +55,5 @@ groups $Luna
 id -u #User ID
 id -g #Primary Group ID
 is -G #all Group IDs
+
+cat /etc/group | grep root #Filter the word I give you next, in this case root or it could also be our moon machine
