@@ -17,3 +17,12 @@ apt upgrade
 apt install -y apt-file && apt-file update
 apt-file search /usr/bin/newgrp
 apt install -y util-linux-extra 
+
+#create a file inside the subshell
+touch ~/dentro_de_newgrp.txt
+ls -ls ~/dentro_de_newgrp.txt
+#the group is now "developers"
+#create a directory
+mkdir -p ~/proyecto_dev/src
+ls -la ~/
+
