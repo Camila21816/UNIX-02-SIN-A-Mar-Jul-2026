@@ -32,3 +32,9 @@ exit
 id -gn
 echo "Grupo restaurado: $/id -gn)"
 
+#compare 2 files
+ls -la ~/antes_de_newgrp.txt ~/dentro_de_newgrp.txt
+#create a password-protected file
+sudo groupadd grupo_restringido 
+sudo gpasswd grupo_restringido
+#The system will ask for a password for the group
