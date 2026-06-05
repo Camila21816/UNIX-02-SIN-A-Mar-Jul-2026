@@ -16,3 +16,4 @@ set +x
 # bash -r blackhatbash1.sh (restricted debugging)
 # Debug script: bash -n blackhatbash1.sh
 # bash -x blackhatbash1.sh (debugs the entire script so it can generate a loop)
+
