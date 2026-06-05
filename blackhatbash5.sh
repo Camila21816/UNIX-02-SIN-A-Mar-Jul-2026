@@ -22,3 +22,12 @@ ls -l / 1> stdout.txt 2> stderr.txt
 cat stdout.txt
 lzl 2> error.txt
 cat error.txt
+
+cat < output.txt
+cat << EOF
+    Black hat Bash
+    by No starch Press
+EOF
+
+ls -l
+ls -l / | grep "bin"
