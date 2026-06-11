@@ -78,6 +78,13 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # normales (no-root) deben poder capturar paquetes. Como en el contenedor
 # siempre somos root, respondemos "false" POR ADELANTADO usando
 # debconf-set-selections para que no detenga el build esperando input.
+
+# BLOCK D: Pre-answering Wireshark Prompt
+# Here we see that we are fixing a common problem with Wireshark.
+# When Wireshark installs, it always shows a screen asking if non-root users can capture packets.
+# We are using debconf-set-selections to send the answer "false" automatically.
+# This is important because we do not want the container build to stop and wait for us.
+
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
