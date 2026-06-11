@@ -229,6 +229,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  # apt deja archivos de caché que ya no necesitamos después de instalar.
  # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
  # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
+ 
+ # BLOCK G: Cleaning Up Temporary Files
+# In this final part, we see apt-get clean and rm -rf deleting temporary installer files.
+# Doing this cleanup in the same RUN line ensures that the trash files are not saved 
+# inside the final layer, keeping our container image light and optimized.
+ 
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
