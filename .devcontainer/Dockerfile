@@ -23,6 +23,11 @@
 # En lugar de partir de cero, partimos de la imagen oficial de Kali Linux
 # en su versión "rolling" (actualización continua, siempre al día).
 # Todo lo que instalemos más abajo se apila ENCIMA de esta base.
+
+# BLOCK A: Base Image Selection
+# Here we see the base image for our environment. 
+# We are not starting from scratch in our computer; instead, we are using 
+# the official Kali Linux container because it has the security tools we need.
 FROM kalilinux/kali-rolling:latest
 
 
