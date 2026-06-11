@@ -295,6 +295,13 @@ RUN git config --global --add safe.directory '*' \
 RUN chsh -s /usr/bin/zsh root
 
 # Prompt institucional para los y las estudiantes del curso
+
+# BLOCK L: Heredoc and Prompt Configuration
+# Here we see a Here-Document structure using <<'EOF'.
+# This allows us to insert multiple lines of text into a file using standard input redirection.
+# We are customizing the profile to create our personal prompt with our name [Camila-Paucar].
+# It uses exit codes to display a green check mark (✓) if a command executes successfully or a red cross (x) if it fails.
+
 RUN cat >> /root/.zshrc <<'EOF'
 
 # ===== Valida si un comando fue ejecutado correctamente =====
