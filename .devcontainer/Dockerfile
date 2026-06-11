@@ -308,6 +308,12 @@ RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Camila-Paucar]%f %F{yellow}%1~%f %{?%F{green}✓.%F{red}x %?%}%f %# '
 EOF
 
+# BLOCK M: Default Startup Command
+# In this final line, we see the CMD instruction.
+# This is different from RUN; RUN executes commands during the build, 
+# but CMD sets the tool that runs automatically when the container starts up.
+# Here, it launches an interactive zsh shell for us.
+
 CMD ["/usr/bin/zsh"]
 
 
