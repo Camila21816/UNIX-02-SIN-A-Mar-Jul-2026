@@ -260,6 +260,12 @@ SHELL ["/bin/bash", "-c"]
 # Codespaces siempre monta el código del repositorio en
 # /workspaces/<nombre-del-repo>. Establecer /workspaces aquí hace que las
 # terminales se abran cerca de nuestros archivos del curso.
+
+# BLOCK I: Defining the Working Directory
+# In this line, we see WORKDIR defining /workspaces.
+# This means that when the container opens in our computer, our terminal 
+# starts directly inside this folder where Codespaces mounts our course repository.
+
 WORKDIR /workspaces
 
 # Configuración de Git para el contenedor:
