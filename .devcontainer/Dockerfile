@@ -287,6 +287,11 @@ RUN git config --global --add safe.directory '*' \
 
 # Cambiar shell de login de root a zsh dentro de la imagen,
 # para que chsh ya no haga falta y todo sea consistente.
+
+# BLOCK K: Changing Root Login Shell
+# In this part, we use chsh to permanently change the default shell for root to zsh.
+# This ensures that whenever we open a new terminal, zsh is ready to use.
+
 RUN chsh -s /usr/bin/zsh root
 
 # Prompt institucional para los y las estudiantes del curso
