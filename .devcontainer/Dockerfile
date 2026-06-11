@@ -107,6 +107,27 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 # El "&&" encadena comandos: ejecuta el siguiente SOLO SI el anterior
 # terminó bien. Si algo falla, el build se detiene con error (que es lo
 # que queremos: mejor un error claro que una imagen rota).
+
+# BLOCK E: Massive Package Installation and Docker Layers
+# In this big block, we see how we update and install software in our environment.
+# - apt-get update refreshes the list of available packages from servers.
+# - apt-get install downloads the tools we need for the course.
+# - We use "-y" to say yes automatically to all prompts so the build does not freeze.
+# - We use "--no-install-recommends" to skip optional packages and save disk space.
+# - We use ONE big RUN instruction connected with "&&" because every RUN creates a new layer.
+#   Fewer layers mean a smaller and lighter image for our computer.
+# - The "&&" operator means the next command only runs if the previous one was successfulh
+# - The backslash "\" is just to split the command into multiple lines so it looks clean.
+# 
+# Some key tools we see here are:
+# - gawk, sed, grep: Text utilities to filter and change code or text files.
+# - shellcheck: A tool to check if our Bash scripts have errors.
+# - nmap: Used for scanning networks and ports.
+# - tcpdump / tshark: Tools to capture and analyze network traffic.
+# - tor / proxychains4: Used to hide connections and route traffic safely.
+# - jq: A utility to parse and read JSON files easily.
+# - man-db: Reinstalls the manual pages ("man") to check command documentation.
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     \
     # === Editores de texto y shells (intérpretes de comandos) ===
