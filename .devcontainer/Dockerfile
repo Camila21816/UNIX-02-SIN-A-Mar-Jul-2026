@@ -30,6 +30,10 @@
 # the official Kali Linux container because it has the security tools we need.
 FROM kalilinux/kali-rolling:latest
 
+# BLOCK B: Image Layers and Cache Idea
+# In this part, we see that the order of the lines is very important for the cache.
+# Every time we run a line, Docker creates a layer. If we change nothing at the top, 
+# Docker does not work twice and the container opens almost instantly in our computer.
 
 # ----------------------------------------------------------------------------
 # ENV: variables de entorno permanentes dentro del contenedor
