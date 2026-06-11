@@ -57,6 +57,14 @@ FROM kalilinux/kali-rolling:latest
 #
 # La barra invertida "\" al final de cada línea significa "esto continúa
 # en la línea siguiente". Solo es para legibilidad.
+
+# BLOCK C: Environment Variables Setup
+# In this block, we are saving some environment variables,
+# We use DEBIAN_FRONTEND=noninteractive so the installer does not stop to ask questions.
+# If we do not use this, the build can freeze waiting for us to press a key.
+# LANG and LC_ALL are here so our computer can use Spanish and show special characters.
+# TERM=xterm-256color is just to see 256 colors inside our terminal tools.
+
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
