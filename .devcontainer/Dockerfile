@@ -276,6 +276,15 @@ WORKDIR /workspaces
 # - git lfs install --system: registra los hooks de LFS globalmente para
 #   que, si un repo los necesita, funcionen sin sorpresas.
 
+# BLOCK J: Global Git Configurations
+# Here we see some Git configuration commands for the system.
+# We use safe.directory '*' to avoid permission errors with shared folders,
+# and we install Git LFS to handle large files correctly.
+RUN git config --global --add safe.directory '*' \
+ && git config --global init.defaultBranch main \
+ && git config --global pull.rebase false \
+ && git lfs install --system
+
 # Cambiar shell de login de root a zsh dentro de la imagen,
 # para que chsh ya no haga falta y todo sea consistente.
 RUN chsh -s /usr/bin/zsh root
