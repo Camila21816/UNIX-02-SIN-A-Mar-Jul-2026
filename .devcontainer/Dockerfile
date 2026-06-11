@@ -245,6 +245,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Por defecto Docker usa /bin/sh (un shell más limitado y antiguo). Lo
 # cambiamos a bash por si agregamos más instrucciones con sintaxis
 # moderna (arrays, [[ ]], etc.).
+
+# BLOCK H: Changing the Default Build Shell
+# Here we see that we are changing the default shell to /bin/bash.
+# Docker usually uses /bin/sh, which is very old. We change it to Bash 
+# so we can use pipes, redirections, and more modern features.
+
 SHELL ["/bin/bash", "-c"]
 
 
