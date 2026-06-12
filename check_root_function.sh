@@ -26,3 +26,7 @@ fi
 
 #EUID (Effective User Identifier): Represents the dynamic identity evaluated by the kernel in real-time to determine security access controls. While it 
 #frequently matches the UID, the EUID shifts when executing processes with elevated privileges (e.g., setuid mechanisms), granting temporary access.
+
+# useradd Luna #Create a new user account in the system called Luna.
+# su - Luna #Switch to the current session to interact as the Luna user.
+# bash check_root_function #Ejecuta un script de Bash llamado check_root_function.
