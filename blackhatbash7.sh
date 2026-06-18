@@ -16,4 +16,14 @@ awk '{print $3}' log.txt
 awk '{print $1,$NF}' log.txt
 touch example_csv.txt
 cat << 'EOF' > example_csv.txt
+hola1, chao1
+queso1, queso2
+eso1, eso2
+EOF
 awk -F',' '{print $1}' example_csv.txt
+
+head log.txt
+awk 'NR < 10' log.txt
+grep "42.236.10.117" log.txt
+awk '{print $7}' log.txt
+grep "42.236.10.117" log.txt | awk '{print $7}'
