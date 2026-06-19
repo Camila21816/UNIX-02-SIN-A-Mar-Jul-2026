@@ -48,3 +48,5 @@ sed -n '2,15 p' log.txt
 sleep 300 &
 jobs
 fg %1
+
+bg %1
