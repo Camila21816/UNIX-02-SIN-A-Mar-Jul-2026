@@ -50,3 +50,8 @@ jobs
 fg %1
 
 bg %1
+
+#exercise_solution.sh
+nohup ./exercise_solution.sh "MiSitio" "google.com" &
+chmod +x exercise_solution.sh
+ps -ef | grep "[e]xercise_solution.sh"
